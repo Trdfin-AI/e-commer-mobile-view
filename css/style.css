@@ -1,37 +1,33 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
-  html, input {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    box-sizing: border-box;
-  }
+
   body{
     margin: 0;
   }
 
   .container {
     padding: 1rem;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
     max-width: 520px;
     background-color: #ffffff;
+    height: 100vh;
   }
   form {
     display: flex;
     flex-wrap: wrap;
   }
   fieldset {
-    background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
-    border: 1px solid #aaa;
+    background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
+    border: 3px solid #8d8c8c;
     border-radius: 5px;
     padding-block-end: 1.2em;
     margin-block-end: 1.2em;
   }
   legend {
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #000000;
     margin-bottom: 10px;
+    background-color: white;
+    border-radius: 15px;
   }
   .field-wrapper {
     display: flex;
@@ -41,11 +37,20 @@
   label, input, button {
     display: block;
   }
+  input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    border-radius: 15px !important;
+    outline: none;
+  }
   label {
+    font-family: Sans-serif;
     font-variant: small-caps;
     font-size: 0.875rem;
-    font-weight: bold;
-    color: #666;
+    font-weight: 600;
+    color: #3a3a3a;
     max-width: 100%;
     margin-bottom: 5px;
     margin-right: 16px;
@@ -71,22 +76,27 @@
   .right {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
-  button {
-    font-size: 1em;
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: 1px solid #aaaaaa;
-    color: #333;
-    font-variant: all-small-caps;
+
+  
+  /* CSS */
+  .button-91 {
+    color: #fff;
+    padding: 10px 25px;
+    background-color: #424241;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
   }
-  button:hover {
-    background-color: #e5e5e5;
-  }
-  button:active {
-    background-color: #ccc;
-  }
+
   
   @media screen and (min-width: 420px) {
     form {
