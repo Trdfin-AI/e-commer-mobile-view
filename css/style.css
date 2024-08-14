@@ -1,182 +1,373 @@
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap';
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css";
+:root {
+    --green: #0d8420;
+    --yellow: #ffe241;
+    --orange: #ec6436;
+    --light: #8292B4;
+    --light-black: #444444;
+}
 
-  body{
-    margin: 0;
-    background-color: #1d1d1d;
-    
-  }
+body {
+    font-family: rubik, sans-serif;
+    font-size: 12px;
+    color: var(--light-black);
+}
 
-  .container {
-    padding: 1rem;
-   display: flex;
-   align-items: center;
-   justify-content: center !important;
-    max-width: 520px;
-    height: 90vh;
-  }
-  form {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  fieldset {
-    background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
-    border: 3px solid #8d8c8c;
-    border-radius: 5px;
-    padding-block-end: 1.2em;
-    margin-block-end: 1.2em;
-  }
-  legend {
-    font-size: 25px;
-    color: #000000;
-    margin-bottom: 10px;
-    background-color: white;
-    border-radius: 15px;
-  }
-  .field-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* justify-content: flex-end; */
-  }
-  .field-wrapper p{
-    text-align: center;
-  }
-  
-  .field-wrapper p a{
+a {
     text-decoration: none;
+}
 
-  }
-  label, input, button {
-    display: block;
-  }
-  .field-wrapper input {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    padding: 12px 10px ;
-    border-radius: 10px ;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-  }
-  label {
-    font-family: Sans-serif;
-    font-variant: small-caps;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #3a3a3a;
-    max-width: 100%;
-    margin-bottom: 5px;
-    margin-right: 16px;
-    margin-top: 2px;
-    text-align: right;
-    letter-spacing: 1px;
-  }
-  .form-element {
-    display: block;
-    width: 100%;
-    padding: 8px 14px;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    margin-bottom: 16px;
-  }
-  ::placeholder {
-    color: #aaa;
-  }
-  .right {
-    width: 100%;
+.btn {
+    font-size: 12px;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.text-muted {
+    color: var(--light) !important;
+}
+
+.link-dark {
+    color: var(--light-black) !important;
+};
+
+.osahan-mb-1 {
+    margin-bottom: 1px;
+}
+
+.fw-bold {
+    font-weight: 500 !important;
+}
+
+.small,
+small {
+    font-size: 10px;
+}
+
+.bg-primary {
+    background-color:#fafbed !important;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.text-primary {
+    color: var(--orange) !important;
+}
+
+.btn-primary {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+}
+
+.btn-outline-success {
+    border-color: var(--green) !important;
+    color: var(--green) !important;
+    background: #f1fff3 !important;
+}
+
+.btn-sm {
+    padding: 6px 19px;
+}
+
+.btn-lg {
+    font-size: 14px;
+    padding: 15px;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+.offcanvas-footer {
+    padding: 1rem;
+}
+
+.form-check .form-check-input:focus {
+    box-shadow: none !important;
+}
+
+.form-check .form-check-input:checked {
+    background-color: #fc8019;
+    border-color: #fc8019;
+}
+
+.shadow,
+.shadow-sm {
+    -webkit-box-shadow: 0 4px 10px rgb(0 77 255/4%) !important;
+    box-shadow: 0 4px 10px rgb(0 77 255/4%) !important;
+}
+
+.border {
+    border: 1px solid #eaf1f5 !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #eaf1f5 !important;
+}
+
+.border-top {
+    border-top: 1px solid #eaf1f5 !important;
+}
+
+.border-start {
+    border-left: 1px solid #eaf1f5 !important;
+}
+
+.border-end {
+    border-right: 1px solid #eaf1f5 !important;
+}
+
+.accordion-item {
+    border-color: #eaf1f6;
+}
+
+.icon-sm {
+    height: 40px;
+    width: 40px;
     display: flex;
+    align-items: center;
     justify-content: center;
-  }
-
-  .button-91 {
-    color: #fff;
-    padding: 12px 45px;
-    background-color: #424241;
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
-    border-radius: 14px;
-    font-weight: bold;
-    font-size: 16px;
-    border: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    cursor: pointer;
-  }
-
-  @media screen and (min-width: 420px) {
-    form {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-    fieldset {
-      padding-inline-end: 1.2em;
-    }
-    label {
-      flex-basis: 26%;
-    }
-    .form-element {
-      flex-basis: 68%;
-      flex-grow: 1;
-    }
-  }
-
-
- /* Define custom property outside of any class */
-@property --border-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0turn;
 }
 
-.box {
-  padding: 10px;
-  display: grid;
-  place-content: center;
-  color: white;
-  text-shadow: 0 1px 0 #000;
-  
-  --border-angle: 0turn; 
-  --main-bg: conic-gradient(
-    from var(--border-angle),
-    #213,
-    #112 5%,
-    #112 60%,
-    #213 95%
-  );
-  
-  border: solid 5px transparent;
-  border-radius: 2em;
-  --gradient-border: conic-gradient(
-    from var(--border-angle),
-    transparent 25%, 
-    #08f, 
-    #f03 99%, 
-    transparent
-  );
-  
-  background: 
-    var(--main-bg) padding-box,
-    var(--gradient-border) border-box, 
-    var(--main-bg) border-box;
-  
-  background-position: center center;
-  
-  animation: bg-spin 2s linear infinite;
+.icon-lg {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes bg-spin {
-  to {
-    --border-angle: 1turn;
-  }
+.all-cate.slick-initialized,
+.top-picks.slick-initialized,
+.coupons.slick-initialized,
+.product-slider.slick-initialized {
+    visibility: visible;
+    opacity: 1;
 }
 
-.box:hover {
-  animation-play-state: paused;
+.all-cate,
+.top-picks,
+.coupons,
+.product-slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
 }
 
-  
+html ::-webkit-resizer {
+    background-color: #fff;
+}
+
+html ::-webkit-scrollbar {
+    width: 5px;
+    overflow: visible;
+}
+
+html ::-webkit-scrollbar-button {
+    display: none;
+}
+
+html ::-webkit-scrollbar-corner {
+    background-color: #fff;
+}
+
+html ::-webkit-scrollbar-thumb {
+    background-color: rgba(138, 138, 138, .4);
+    border-radius: 7px;
+}
+
+html ::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+.user-icon {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-box {
+    height: 110px;
+    width: auto;
+    border: 1px solid #e5e5e5;
+}
+
+.btn-category {
+    position: absolute;
+    bottom: 6rem;
+    right: 1rem;
+}
+
+.osahan-badge {
+    font-size: 8px;
+    letter-spacing: .4px;
+    line-height: 10px;
+    padding: 5px 4px 4px;
+    border-radius: 0 0 6px 6px;
+}
+
+.osahan-badge b {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.all-cate p.card-title {
+    line-height: 14px;
+}
+
+.osahan-offer-banner {
+    height: 160px;
+}
+
+.osahan-offer-banner-2 {
+    height: 112px;
+}
+
+.cart-product {
+    width: 50px;
+}
+
+.custom-checkbox .btn-outline-danger {
+    border-color: #d1d1d1 !important;
+    color: #000 !important;
+}
+
+.custom-checkbox .btn-check:checked+.btn-outline-danger {
+    background-color: #fdac6a4f !important;
+    border-color: #fc8019 !important;
+    color: #fc8019 !important;
+}
+
+.osahan-count input {
+    width: 22px
+}
+
+.tracking-time {
+    margin-top: -65px;
+    position: relative;
+}
+
+.order-time {
+    height: 80px;
+    width: 80px;
+    border: 5px solid #fc8019;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-boy-img {
+    min-width: 38px;
+    max-width: 38px;
+}
+
+.osahan-user-profile img {
+    height: 50px
+}
+
+.nav-wrapper.nav-wrapper-0 .nav-content h2 {
+    display: none;
+}
+
+li.nav-parent.level-open h2 {
+    display: block !important;
+}
+
+.listing-left {
+    width: 75px;
+    max-width: 75px;
+    min-width: 75px
+}
+
+.listing-navbar img {
+    width: 30px;
+}
+
+.osahan-item-sidebar .nav-link {
+    padding: 0;
+    position: relative;
+    margin: 7px 0;
+}
+
+.osahan-item-sidebar .nav-link img {
+    height: 45px;
+    width: 45px;
+    object-fit: contain;
+    padding: 3px;
+}
+
+.osahan-item-sidebar .nav-link p {
+    color: #8292b4;
+}
+
+.osahan-item-sidebar .nav-link.active p {
+    color: #ed6337;
+}
+
+.osahan-item-sidebar .nav-link.active {
+    background: 0 0;
+}
+
+.osahan-item-sidebar .nav-link.active:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: #ed6337;
+    top: 0;
+    bottom: 0;
+    right: -10px;
+    border-radius: 9px;
+}
+
+.osahan-item-sidebar .nav-link.active img {
+    background: #ffe9e2 !important
+}
+
+.coupon-top-shape {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    left: -5px;
+    top: -11px;
+    border-radius: 50px;
+}
+
+.coupon-bottom-shape {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    left: -5px;
+    bottom: -11px;
+    border-radius: 50px;
+}
+
+.coupon-top-shape-2 {
+    width: 25px;
+    height: 25px;
+    background: #f8f9fa;
+    left: -11px;
+    bottom: -12px;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px #e0e0e0;
+}
+
+.coupon-bottom-shape-2 {
+    width: 25px;
+    height: 25px;
+    background: #f8f9fa;
+    right: -11px;
+    bottom: -12px;
+    border-radius: 50px;
+    box-shadow: -1px 0 1px #e0e0e0;
+}
+
+.osahan-coupons-code .border-end {
+    border-right-style: dashed !important;
+    border-color: #fff !important;
+}
