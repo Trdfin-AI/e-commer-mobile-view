@@ -17,16 +17,31 @@
 .orders{
     height: 100vh;
 }
+.order-id{
+  color: white;
+}
 .view-order{
   background: #000;
   padding: 15px 10px;
 
 }
-.orders button{
-    background-color: violet;
+.orders .accept{
+    background-color: rgb(255, 255, 255);
     padding: 10px 12px;
     border-radius: 20px;
-    margin-right: 5px;
+    margin-right: 3px;
+    font-size: larger;
+    border: 3px solid green;
+    color: green;
+}
+.orders .Decline{
+  background-color: rgb(255, 255, 255);
+  padding: 10px 12px;
+  border-radius: 20px;
+  margin-right: 3px;
+  font-size: larger;
+  border: 3px solid red;
+  color: red;
 }
 
 
@@ -40,7 +55,6 @@
 
 .card-greeting{
     position: relative;
-    padding: 3rem;
     background: #f8991d;
     overflow: hidden;
     border-radius: 1rem;
@@ -75,7 +89,7 @@
     position: relative;
     z-index: 10;
     text-align: center;
-   padding-top: 15px;
+   padding-top: 10px;
   }
   
   @keyframes rotating {
@@ -107,4 +121,72 @@
     top:-35px;
     border-radius: 50%;
     background-color: rgba(245, 168, 54, 0.925);
+}
+
+
+.my-auto{
+  background-color:#020318 ;
+  border-radius: 20px;
+}
+
+.neon__card {
+  background: rgba(255, 255, 255, 0.01);
+  color: #fff;
+  box-shadow: inset 0 22px 56px -36px rgba(255, 255, 255, .5), 
+  inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
+  inset 0 -31px 34px -32px rgba(96, 68, 144, .3), 
+  inset 0 39px 50px -34px rgba(202, 172, 255, .3), 
+  inset 0 2px 9px rgba(154, 146, 210, .3), 
+  inset 0 1px 10px rgba(227, 222, 255, .2);;
+  backdrop-filter: blur(100px);
+  padding: 15px;
+  border-radius: 3rem;
+  text-align: center;
+  border: 3px solid  rgba(255, 255, 255, 0.01);
+
+}
+
+.neon__title {
+  font-size: 20px;
+  margin-bottom: .25rem;
+}
+
+.neon__button {
+  box-shadow: inset 0 2px 7px -9px rgba(255, 255, 255, .5), 
+  inset 0 1px 2px -1px rgba(255, 255, 255, 1), 
+  inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
+  inset 0 28px 25px -24px rgba(202, 172, 255, .3), 
+  inset 0 1px 4px rgba(154, 146, 210, .3), 
+  inset 0 1px 10px rgba(227, 222, 255, .2);;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(161, 165, 247, .8);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 1rem;
+  font-size: 15px;
+}
+
+
+/* Card neon hover */
+.neon__card:hover {
+  box-shadow:  inset 0 19px 28px -18px rgba(255, 255, 255, .5), 
+  inset 0 4px 6px -3px rgba(255, 255, 255, 1), 
+  inset 0 -51px 44px -42px rgba(96, 68, 144, .3), 
+  inset 0 59px 60px -32px rgba(202, 172, 255, .3), 
+  inset 0 4px 16px rgba(154, 146, 210, .3), 
+  inset 0 2px 25px rgba(227, 222, 255, .23);;
+}
+
+.neon__card:hover .neon__title,
+.neon__card:hover .neon__description {
+  text-shadow:  0 0 14px rgba(161, 165, 247, .8);
+}
+
+.neon__card, 
+.neon__icon, 
+.neon__title, 
+.neon__description, 
+.neon__button {
+  transition: .3s;
 }
