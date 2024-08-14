@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #order-details {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .section p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .product-list li:last-child {
+            border-bottom: none;
+        }
+        .payment-method {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="order-details">
+        <h1>Order Details</h1>
+
+        <div class="section">
+            <h2>Customer Information</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>John Doe</td>
+                    </th>
+                    <tr>
+                        <th>Address</th>
+                        <td>123 Main Street, Apt 4B, New York, NY 10001</td>
+                    </tr>
+                    <tr>
+                        <th>Mobile No</th>
+                        <td>(123) 456-7890</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Product List</h2>
+            <ul class="product-list">
+                <li>Product 1 - $19.99</li>
+                <li>Product 2 - $29.99</li>
+                <li>Product 3 - $9.99</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Payment Method</h2>
+            <p class="payment-method">Credit Card (Visa)</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the order ID from the query string
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('orderId');
+            
+            // Fetch order details from a server or local storage
+            // This example assumes you have an endpoint like /api/orders/:id
+            fetch(`/api/orders/${orderId}`)
+                .then(response => response.json())
+                .then(order => {
+                    // Populate the order details
+                    document.getElementById('order-details').innerHTML = `
+                        <p><strong>Order ID:</strong> ${order.id}</p>
+                        <p><strong>User Name:</strong> ${order.userName}</p>
+                        <p><strong>Address:</strong> ${order.address}</p>
+                        <p><strong>Amount:</strong> ${order.amount}</p>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error fetching order details:', error);
+                });
+        });
+        app.get('/api/orders/:id', (req, res) => {
+            const orderId = req.params.id;
+            // Fetch order details from your database
+            // Here we're just sending a mock response
+            res.json({
+                id: orderId,
+                userName: 'John Doe',
+                address: '123 Main St, Anytown, USA',
+                amount: '$99.99'
+            });
+        });
+    </script>
+</body>
+</html>
