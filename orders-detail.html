@@ -50,6 +50,19 @@
         .payment-method {
             font-weight: bold;
         }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          
+
     </style>
 </head>
 <body>
@@ -93,16 +106,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Get the order ID from the query string
+
             const urlParams = new URLSearchParams(window.location.search);
             const orderId = urlParams.get('orderId');
             
-            // Fetch order details from a server or local storage
-            // This example assumes you have an endpoint like /api/orders/:id
             fetch(`/api/orders/${orderId}`)
                 .then(response => response.json())
                 .then(order => {
-                    // Populate the order details
+
                     document.getElementById('order-details').innerHTML = `
                         <p><strong>Order ID:</strong> ${order.id}</p>
                         <p><strong>User Name:</strong> ${order.userName}</p>
@@ -116,8 +127,7 @@
         });
         app.get('/api/orders/:id', (req, res) => {
             const orderId = req.params.id;
-            // Fetch order details from your database
-            // Here we're just sending a mock response
+
             res.json({
                 id: orderId,
                 userName: 'John Doe',
