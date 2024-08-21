@@ -17,6 +17,9 @@
 .orders{
     height: 100vh;
 }
+.orders h3{
+  text-decoration: underline;
+}
 .order-id{
   color: white;
 }
@@ -27,8 +30,8 @@
 }
 .orders .accept{
   background-color: rgb(255, 255, 255);
-  padding: 10px 12px;
-  border-radius: 20px;
+  padding: 5px 8px;
+  border-radius: 15px;
   margin-right: 3px;
   font-size: larger;
   border: 3px solid green;
@@ -36,8 +39,8 @@
 }
 .orders .decline{
 background-color: rgb(255, 255, 255);
-padding: 10px 12px;
-border-radius: 20px;
+padding: 5px 8px;
+border-radius: 15px;
 margin-right: 3px;
 font-size: larger;
 border: 3px solid red;
@@ -46,7 +49,7 @@ color: red;
 @media (max-width:350px) {
   .orders .accept{
     background-color: rgb(255, 255, 255);
-    padding: 10px 5px;
+    padding: 5px 8px;
     border-radius: 20px;
     margin-right: 3px;
     font-size: larger;
@@ -68,8 +71,6 @@ color: red;
     bottom: 0;
     right: 0;
 }
-
-
 
 .card-greeting{
     position: relative;
@@ -141,14 +142,13 @@ color: red;
     background-color: rgba(245, 168, 54, 0.925);
 }
 
-
+/* home page card */
 .my-auto{
-  background-color:#020318 ;
   border-radius: 20px;
 }
 
 .neon__card {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(0, 0, 0, 0.692);
   color: #fff;
   box-shadow: inset 0 22px 56px -36px rgba(255, 255, 255, .5), 
   inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
@@ -158,9 +158,9 @@ color: red;
   inset 0 1px 10px rgba(227, 222, 255, .2);;
   backdrop-filter: blur(100px);
   padding: 15px;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   text-align: center;
-  border: 3px solid  rgba(255, 255, 255, 0.01);
+  border: 8px solid  rgb(255, 255, 255);
 
 }
 
@@ -207,4 +207,99 @@ color: red;
 .neon__description, 
 .neon__button {
   transition: .3s;
+}
+
+/* order-details */
+
+#order-details {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+.section {
+  margin-bottom: 20px;
+}
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #555;
+}
+.section p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+.product-list {
+  list-style-type: none;
+  padding: 0;
+}
+.product-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.product-list li:last-child {
+  border-bottom: none;
+}
+.payment-method {
+  font-weight: bold;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.conformation{
+  background: #000000;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.conformation >.b-1 button,
+.b-2 button,
+.b-3 button{
+  padding: 10px;
+  border-radius: 0px 10px 10px 10px;
+  background: #3ed148;
+  color: white;
+  border: 2px solid rgb(243, 241, 241);
+}
+
+.start {
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #4e4343;
+  clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  height: 40px;
+  font-size: 0.7rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: .2s .1s;
+  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+  border: 0 solid;
+  overflow: hidden;
+}
+
+.start:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
+  padding-right: 30px;
+  padding-left: 30px;
 }
