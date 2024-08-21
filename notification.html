@@ -32,46 +32,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="my-auto overflow-auto mt-3">
-            <div class="p-3 ">
-                <div class="row m-0 p-0">
-                    <div class="neon__card col-6">
-
-                        <h4 class="neon__title">Total Orders</h4>
-                        <p class="neon__description"></p>
-                        <a href="#" class="neon__button"> 34234
-
-                        </a>
-                    </div>
-                    <div class="neon__card col-6">
-                        <i class="bi bi-cart-check h2"></i>
-                        <h4 class="neon__title">Total Orders</h4>
-                        <p class="neon__button mb-0"> 34234
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="orders">
-            <h5 class="ms-3">YOUR ORDERS</h5>
-            <hr>
-            <div class="rating d-flex align-items-center justify-content-around">
-                <h5>ORDER ID</h5>
-                <h5>VIEWS</h5>
-            </div>
-            <div class="view-order">
-                <div class="row  m-0">
-                    <div class="order-id col-6 d-flex justify-content-around align-items-center">
-                        <h5 class="m-0">#39879</h5>
-                    </div>
-                    <div class="col-5 d-flex justify-content-around w-50 p-0">
-                        <button class="accept" data-order-id="39879">Accept</button>
-                        <button class="decline" data-order-id="39879">Decline</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="footer bg-white shadow mt-auto border-top">
             <div class="d-flex align-items-center justify-content-between py-1">
@@ -101,15 +62,6 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.accept').forEach(button => {
-                button.addEventListener('click', function () {
-                    const orderId = this.getAttribute('data-order-id');
-                    // Redirect to the order details page with the order ID
-                    window.location.href = `orders-detail.html?orderId=${orderId}`;
-                });
-            });
-        });
     </script>
 </body>
 
