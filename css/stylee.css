@@ -58,6 +58,16 @@ a {
   font-weight: 600;
 }
 
+.noti-num{
+  position: absolute;
+  top: 0;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
+
 /* total order */
 .total-order{
     background-color: black !important;
