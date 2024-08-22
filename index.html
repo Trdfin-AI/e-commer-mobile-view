@@ -13,7 +13,14 @@
 
 </head>
 
+
 <body>
+    <div class="loader amit">
+        <div class="truck">
+            <img src="image/—Pngtree—cartoon delivery man_876933.png" width="120px" />
+        </div>
+        <span class="getting-there">LOADING ...</span>
+    </div>
     <div class="homepage">
         <div class="homepage-navbar bg-light shadow mb-auto ">
             <div class="row m-0">
@@ -101,15 +108,6 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.accept').forEach(button => {
-                button.addEventListener('click', function () {
-                    const orderId = this.getAttribute('data-order-id');
-                    // Redirect to the order details page with the order ID
-                    window.location.href = `orders-detail.html?orderId=${orderId}`;
-                });
-            });
-        });
     </script>
 </body>
 
