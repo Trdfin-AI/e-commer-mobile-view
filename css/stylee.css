@@ -52,8 +52,8 @@ a {
   opacity: 1;
   }
   100% {
-  -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-  transform: translate3d(100%, 50%, 0) skewX(30deg);
+  -webkit-transform: translate3d(100%, 50%, 0) skewX(5deg);
+  transform: translate3d(100%, 50%, 0) skewX(5deg);
   opacity: 0;
   }
   }
@@ -85,19 +85,23 @@ a {
 }
 .homepage-navbar .log-out{
   position: absolute;
-  right: 8px;
+  right: 3.5px;
+
 }
 .log-out i{
   font-weight: 600;
+  font-size: 16px;
+  color: rgb(203, 36, 36);
+  padding: 2px 4px 0px 0px;
 }
 
 .noti-num{
   position: absolute;
-  top: 0;
+  top: 3px;
   background-color: red;
   color: white;
   font-weight: 500;
-  padding: 2px 7px;
+  padding: 1px 6px;
   border-radius: 50%;
 }
 
@@ -235,12 +239,17 @@ color: red;
     justify-content: center;
     align-items: center;
 }
+#profileImage{
+  background: #faa02a;
+  height: 100px;
+  width: 100px;
+}
 .profile-img{
     position:relative;
 }
 .edit-img{
     position: absolute;
-    padding: 3px 6px;
+    padding: 2px 5px;
     top:-35px;
     border-radius: 50%;
     background-color: rgba(245, 168, 54, 0.925);
