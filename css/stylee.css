@@ -79,9 +79,12 @@ a {
 /* preloader end */
 
 .homepage-navbar{
-    background-color:#f8991d !important;
+    color:#f8991d !important;
+    background-color: #000000;
     border-radius: 0px 0px 20px 20px;
     position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .homepage-navbar .log-out{
   position: absolute;
@@ -92,7 +95,7 @@ a {
   font-weight: 600;
   font-size: 16px;
   color: rgb(203, 36, 36);
-  padding: 2px 4px 0px 0px;
+  padding: 2px 3px 0px 0px;
 }
 
 .noti-num{
@@ -125,16 +128,20 @@ a {
 .orders{
     height: 100vh;
 }
-.orders h3{
-  text-decoration: underline;
+
+.orders h6::after{
+    content: '______ _____ ';
+    display: block;
+    margin-top: -15px;
+    
 }
 .order-id{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .view-order{
-  background: #000;
+  background: #ffffff;
   padding: 15px 10px;
-
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .orders .accept{
   background-color: rgb(255, 255, 255);
@@ -142,7 +149,7 @@ a {
   border-radius: 15px;
   margin-right: 3px;
   font-size: larger;
-  border: 3px solid green;
+  border: 2px solid green;
   color: green;
 }
 .orders .decline{
@@ -151,7 +158,7 @@ padding: 5px 8px;
 border-radius: 15px;
 margin-right: 3px;
 font-size: larger;
-border: 3px solid red;
+border: 2px solid red;
 color: red;
 }
 @media (max-width:350px) {
@@ -161,16 +168,16 @@ color: red;
     border-radius: 20px;
     margin-right: 3px;
     font-size: larger;
-    border: 3px solid green;
+    border: 2px solid green;
     color: green;
 }
 .orders .decline{
   background-color: rgb(255, 255, 255);
-  padding: 10px 4px;
+  padding: 7px 4px;
   border-radius: 20px;
   margin-right: 3px;
   font-size: larger;
-  border: 3px solid red;
+  border: 2px solid red;
   color: red;
 }
 }
@@ -182,10 +189,12 @@ color: red;
 
 .card-greeting{
     position: relative;
-    background: #f8991d;
+    color:#f8991d !important;
+    background: #000000;
     overflow: hidden;
     border-radius: 1rem;
     color: hsl(0, 0%, 0%);
+    
   }
   
   .card-greeting::before {
@@ -215,7 +224,7 @@ color: red;
   .card-content {
     position: relative;
     z-index: 10;
-    text-align: center;
+ 
    padding-top: 10px;
   }
   
@@ -264,17 +273,33 @@ color: red;
   background: rgba(0, 0, 0, 0.692);
   color: #fff;
   box-shadow: inset 0 22px 56px -36px rgba(255, 255, 255, .5), 
-  inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
+  /* inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
   inset 0 -31px 34px -32px rgba(96, 68, 144, .3), 
   inset 0 39px 50px -34px rgba(202, 172, 255, .3), 
   inset 0 2px 9px rgba(154, 146, 210, .3), 
-  inset 0 1px 10px rgba(227, 222, 255, .2);;
+  inset 0 1px 10px rgba(227, 222, 255, .2); */
+  inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
+  inset 0 -31px 34px -32px rgba(48, 46, 53, 0.3), 
+  inset 0 39px 50px -34px rgba(59, 54, 69, 0.3), 
+  inset 0 2px 9px rgba(68, 66, 78, 0.3), 
+  inset 0 1px 10px rgba(67, 65, 83, 0.2);
   backdrop-filter: blur(100px);
   padding: 15px;
   border-radius: 1.5rem;
   text-align: center;
   border: 8px solid  rgb(255, 255, 255);
 
+}
+.neon-inner::before{
+  content: "";
+  position: absolute;
+  inset: 5px 5px 5px 5px;
+  border-radius: 1rem;
+  pointer-events: none;
+  border: 2px solid #fff;
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .neon__title {
@@ -288,18 +313,18 @@ color: red;
   inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
   inset 0 28px 25px -24px rgba(202, 172, 255, .3), 
   inset 0 1px 4px rgba(154, 146, 210, .3), 
-  inset 0 1px 10px rgba(227, 222, 255, .2);;
+  inset 0 1px 10px rgba(227, 222, 255, .2);
   color: #fff;
   text-shadow: 0 0 8px rgba(161, 165, 247, .8);
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 2px;
   border-radius: 1rem;
   font-size: 16px;
 }
 
+/* 
 
-/* Card neon hover */
 .neon__card:hover {
   box-shadow:  inset 0 19px 28px -18px rgba(255, 255, 255, .5), 
   inset 0 4px 6px -3px rgba(255, 255, 255, 1), 
@@ -320,7 +345,7 @@ color: red;
 .neon__description, 
 .neon__button {
   transition: .3s;
-}
+} */
 
 /* order-details */
 
@@ -416,3 +441,7 @@ td, th {
   padding-right: 30px;
   padding-left: 30px;
 }
+
+
+
+/* only mobile view  */
