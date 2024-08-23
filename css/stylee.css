@@ -80,7 +80,7 @@ a {
 
 .homepage-navbar{
     color:#f8991d !important;
-    background-color: #000000;
+    background-color: #000000 !important;
     border-radius: 0px 0px 20px 20px;
     position: relative;
     overflow: hidden;
