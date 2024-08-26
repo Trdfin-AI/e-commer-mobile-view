@@ -97,3 +97,48 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // profile js code end //
 
+// order history start
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.Download-button').addEventListener('click', function() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        const table = document.querySelector('.order-table');
+        
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
+        const rows = Array.from(table.querySelectorAll('tbody tr')).map(tr => 
+            Array.from(tr.querySelectorAll('td')).map(td => td.textContent)
+        );
+
+        doc.autoTable({
+            head: [headers],
+            body: rows,
+            theme: 'striped',
+            margin: { top: 20 },
+            didDrawPage: function (data) {
+                doc.text('Order History', 14, 15);
+            }
+        });
+
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        const formattedDate = `${day}-${month}-${year}`;
+
+        doc.save(`order-history-${formattedDate}.pdf`);
+    });
+});
+
+// shipping  start //
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.accept').forEach(button => {
+        button.addEventListener('click', function () {
+            const orderId = this.getAttribute('data-order-id');
+            // Redirect to the order details page with the order ID
+            window.location.href = `orders-detail.html?orderId=${orderId}`;
+        });
+    });
+});
+
+// shipping  end //
