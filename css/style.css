@@ -503,35 +503,7 @@ td, th {
 .Download-button:active {
   box-shadow: 0 0.3em 1em -0.5em rgba(88, 71, 116, 0.627);
 }
-/* 
-.Download-button::before {
-  content: "";
-  width: 4px;
-  height: 40%;
-  background-color: white;
-  position: absolute;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  left: 0;
-  transition: all 0.2s;
-}
 
-.Download-button::after {
-  content: "";
-  width: 4px;
-  height: 40%;
-  background-color: white;
-  position: absolute;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  right: 0;
-  transition: all 0.2s;
-}
-
-.Download-button:hover::before,
-.Download-button:hover::after {
-  height: 60%;
-} */
 
 @media (max-width:350px) {
   .order-table th,
